@@ -1,0 +1,67 @@
+<!DOCTYPE html>  
+<html lang="en-GB">  
+	<head>
+		<title>Advert fader</title>
+
+		<script type="text/javascript" src="javascript/prototype.js"></script>
+		<script type="text/javascript" src="javascript/scriptaculous.js"></script>
+		<script type="text/javascript" src="javascript/effects.js"></script>
+		<script type="text/javascript" src="advertFader.js"></script>
+		
+		<style type="text/css">
+			html		{ margin: 0; padding: 0; }
+			body		{ background: #626262 url(images/wood-pattern.jpg); font-family: helvetica, verdana, sans-serif; margin: 0; padding: 0; }
+			img			{ float: left; margin: 0; padding: 0; }
+			a			{ margin: 0; padding: 0; }
+			a:focus		{ outline: none; }
+			div.wrap		{ background: #fff; margin: 50px auto; min-height: 400px; padding: 20px; overflow: auto; width: 950px; }
+			a img		{ border: none; }
+			
+			/* used for slider */
+			#AdvertFader{ height: 240px; margin: 0 auto; overflow: hidden; position: relative; width: 730px; }
+			.items		{ display: block; height: 240px; float: left; list-style: none; margin: 0; overflow: hidden; padding: 0; width: 480px; }
+			.items li	{ background-position: 0 0; background-repeat: no-repeat; list-style: none; margin: 0; position: absolute; padding: 0; }
+			.items a	{ display: block; height: 240px; position: relative; text-decoration: none; width: 480px;}
+			.items a span	{ background: url(images/opacity.png); bottom: 0; color: #fff; display: block; font-weight: normal; padding: 15px; position: absolute; text-decoration: none; width: 480px; }
+			
+			.thumbs		{ display: block; list-style: none; margin: 0; padding: 0; position: absolute; right: 0; top: 0; width: 280px; }
+			.thumbs li	{ height: 48px; list-style: none; margin: 0; padding: 0 0 0 30px;}
+			.thumbs li a:link,
+			.thumbs li a:visited,
+			.thumbs li a:hover,
+			.thumbs li a:active { background: #c1c1c1; border-bottom: 1px solid #b1b1b1; color: #464646; display: block; font-weight: bold; text-decoration: none; padding: 15px; }
+			
+			.thumbs li.selected	{ background: url(images/pointer.png) no-repeat 0 0; }
+			.thumbs li.selected a:link,
+			.thumbs li.selected a:visited,
+			.thumbs li.selected a:hover,
+			.thumbs li.selected a:active { background: #464646; border-bottom: 1px solid #b1b1b1; color: #fff; display: block; font-weight: bold; }
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<h1>Advert fader - prototype/scriptaculous</h1>
+			<div id="AdvertFader">
+				<ul class="items">
+					<li style="background-image: url(images/1.jpg); display: block; "><a href="http://www.google.co.uk"><span>Lorem ipsum dolor amit</span></a></li>
+					<li style="background-image: url(images/2.jpg); display: none; "><a href="http://www.google.co.uk"><span>Lorem ipsum dolor amit</span></a></li>
+					<li style="background-image: url(images/3.jpg); display: none; "><a href="http://www.google.co.uk"><span>Lorem ipsum dolor amit</span></a></li>
+					<li style="background-image: url(images/4.jpg); display: none; "><a href="http://www.google.co.uk"><span>Lorem ipsum dolor amit</span></a></li>
+					<li style="background-image: url(images/5.jpg); display: none; "><a href="http://www.google.co.uk"><span>Lorem ipsum dolor amit</span></a></li>
+				</ul>
+				<ul class="thumbs">
+					<li class="thumb-0 selected"><a href="http://www.google.co.uk">Lorem ipsum dolor</a></li>
+					<li class="thumb-1"><a href="http://www.google.co.uk">Lorem ipsum dolor</a></li>
+					<li class="thumb-2"><a href="http://www.google.co.uk">Lorem ipsum dolor</a></li>
+					<li class="thumb-3"><a href="http://www.google.co.uk">Lorem ipsum dolor</a></li>
+					<li class="thumb-4"><a href="http://www.google.co.uk">Lorem ipsum dolor</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var AdvertFader = new AdvertFader('AdvertFader', {});	
+		</script>
+
+	</body>
+</html>

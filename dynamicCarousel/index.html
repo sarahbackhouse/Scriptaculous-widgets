@@ -1,0 +1,117 @@
+<!DOCTYPE html>  
+<html lang="en-GB">  
+	<head>
+		<title>Dynamic Carousel</title>
+
+		<script type="text/javascript" src="javascript/prototype.js"></script>
+		<script type="text/javascript" src="javascript/scriptaculous.js"></script>
+		<script type="text/javascript" src="javascript/effects.js"></script>
+		<script type="text/javascript" src="dynamicCarousel.js"></script>
+		
+		<style type="text/css">
+			html		{ margin: 0; padding: 0; }
+			body		{ background: #626262 url(images/wood-pattern.jpg); font-family: helvetica, verdana, sans-serif; margin: 0; padding: 0; }
+			img			{ margin: 0; padding: 0; }
+			a			{ margin: 0; padding: 0; }
+			a:focus		{ outline: none; }
+			div.wrap		{ background: #fff; margin: 50px auto; min-height: 400px; padding: 20px; overflow: auto; width: 650px; }
+			a img		{ border: none; }
+			ul,li		{ list-style: none; margin: 0; padding: 0;}
+			div, ul, li, img { zoom: 1; text-align: left; }
+
+			/* used for slider */
+			#dynamicCarousel	{ margin: 0 auto 20px; overflow: hidden; position: relative; }
+			.frame				{ height: 350px; width: 650px; overflow: hidden; position: relative; }
+			.items				{ display: block; list-style: none; margin: 0; overflow: hidden; padding: 0; width: 60000px;}
+			.items li			{ background: #000; display: block; float: left; list-style: none; margin: 0; padding: 10px 0; text-align: center;}
+			.items li img		{ margin: 10px 0; width: 600px;}
+			.items li a 		{ color: #fff; display: block; padding: 5px; text-decoration: none; }
+			
+			.controls			{ bottom: 10px; clear: both; list-style: none; left: 10px; margin:0; padding: 10px 0; position: absolute; right: 10px;  }
+			.controls li		{ display: inline; list-style: none; margin: 0; padding: 0; }
+			.controls ul		{ display: inline; list-style: none; margin: 0; padding: 0; }
+			.controls li a 		{ background: url(images/control.png) no-repeat 0 0; color: #333; display: block; float: left; font-size: 8px; font-weight: bold; height: 10px; margin: 0 2px; overflow: hidden; padding: 3px 4px 3px; text-align: center; text-decoration: none; width: 8px; }
+			.controls li a.nextButton 		{ background: url(images/control_forward.png) no-repeat 0 0; text-indent: -1000em; }
+			.controls li a.previousButton 	{ background: url(images/control_back.png) no-repeat 0 0; text-indent: -1000em; }
+			.controls li a.playButton 		{ background: url(images/control_play.png) no-repeat 0 0; text-indent: -1000em; }
+			.controls li a.pauseButton 		{ background: url(images/control_pause.png) no-repeat 0 0; text-indent: -1000em; }
+			.controls li a.selected			{ color: #008299; }
+			.controls li.right	{ float: right;}
+			.controls li.left	{ float: left; }
+
+			#dynamicCarousel2	{ margin: 0 auto; overflow: hidden;  position: relative;}
+			#dynamicCarousel2 .items	{ display: block; list-style: none; margin: 0; overflow: hidden; padding: 0; height: 1000000px; }
+			#dynamicCarousel2 .items li	{ clear: left; float: left; overflow: hidden; padding: 0;}
+			#dynamicCarousel2 .items li img	{ margin: 20px 0;}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<h1>Dynamic carousel - prototype/scriptaculous</h1>
+			<div id="dynamicCarousel">
+				<div class="frame">
+					<ul class="items">
+						<li><img src="images/1.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/2.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/3.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/4.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/5.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+					</ul>
+				</div>
+				<ul class="controls">
+					<li class="right">
+						<ul class="pages">
+							<li><a class="page-1 selected" href="http://www.google.co.uk">1</a></li>
+							<li><a class="page-2" href="http://www.google.co.uk">2</a></li>
+							<li><a class="page-3" href="http://www.google.co.uk">3</a></li>
+							<li><a class="page-4" href="http://www.google.co.uk">4</a></li>
+							<li><a class="page-5" href="http://www.google.co.uk">5</a></li>
+						</ul>
+					</li>
+					<li class="left">
+						<ul>
+							<li><a class="previousButton" href="#">Back</a></li>
+							<li><a class="nextButton" href="#">Next</a></li>
+							<li><a class="playButton" href="#">Play</a></li>
+							<li><a class="pauseButton" href="#">Pause</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="dynamicCarousel2">
+				<div class="frame">
+					<ul class="items">
+						<li><img src="images/1.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/2.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/3.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/4.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+						<li><img src="images/5.jpg" alt="" /><a href="http://www.google.co.uk">Lorem ipsum dolor amit</a></li>
+					</ul>
+				</div>
+				<ul class="controls">
+					<li class="right">
+						<ul class="pages">
+							<li><a class="page-1 selected" href="http://www.google.co.uk">1</a></li>
+							<li><a class="page-2" href="http://www.google.co.uk">2</a></li>
+							<li><a class="page-3" href="http://www.google.co.uk">3</a></li>
+							<li><a class="page-4" href="http://www.google.co.uk">4</a></li>
+							<li><a class="page-5" href="http://www.google.co.uk">5</a></li>
+						</ul>
+					</li>
+					<li class="left">
+						<ul>
+							<li><a class="previousButton" href="#">Back</a></li>
+							<li><a class="nextButton" href="#">Next</a></li>
+							<li><a class="playButton" href="#">Play</a></li>
+							<li><a class="pauseButton" href="#">Pause</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var dynamicCarousel = new DynamicCarousel('dynamicCarousel', { autoSlide: true, playPause: true, nextPrevious: true, pageNavigation: true});	
+			var dynamicCarousel2 = new DynamicCarousel('dynamicCarousel2', { autoSlide: true, direction: 'vertical', height: 371, autoSlide: true, playPause: true, nextPrevious: true, pageNavigation: true});	
+		</script>
+	</body>
+</html>

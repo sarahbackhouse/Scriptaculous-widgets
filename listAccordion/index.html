@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html lang="en-GB">  
+	<head>
+		<title>List accordion</title>
+
+		<script type="text/javascript" src="javascript/prototype.js"></script>
+		<script type="text/javascript" src="javascript/scriptaculous.js"></script>
+		<script type="text/javascript" src="javascript/effects.js"></script>
+		<script type="text/javascript" src="listAccordion.js"></script>
+		
+		<style type="text/css">
+			html		{ margin: 0; padding: 0; }
+			body		{ background: #626262 url(images/wood-pattern.jpg); font-family: helvetica, verdana, sans-serif; margin: 0; padding: 0; }
+			img			{ margin: 0; padding: 0; }
+			a			{ margin: 0; padding: 0; }
+			a:focus		{ outline: none; }
+			div.wrap		{ background: #fff; margin: 50px auto; min-height: 400px; padding: 20px; overflow: auto; width: 950px; }
+			a img		{ border: none; }
+			
+			/* used for slider */
+			#ListAccordion 					{ margin: 0 auto; overflow: hidden; }
+			.items							{ display: block; list-style: none; margin: 0; overflow: hidden; padding: 0;  }
+			.items li						{ display: block; list-style: none; margin: 0; padding: 0; }
+			.items li a.handle				{ background: #222; border-top: 1px solid #444; border-bottom: 2px solid #000; color: #fff; display: block; font-size: 13px; font-weight: bold; padding: 5px; text-decoration: none; }
+			.items li div.content			{ overflow: hidden; background: #f5f5f5; color: #444; font-size: 13px; }
+			.items li div.content .inner 	{ background: #f5f5f5; padding: 10px; overflow: hidden; }
+			.items li div.content img		{ margin: 10px; }
+			.items li div.content p			{ margin: 0; padding: 0; }
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<h1>List accordion - prototype/scriptaculous</h1>
+			<div id="ListAccordion">
+				<ul class="items">
+					<li>
+						<a class="handle" href="http://www.google.co.uk">Lorem ipsum dolor amit</a>
+						<div class="content">
+							<div class="inner">
+								<img src="images/1.jpg" alt="" />
+								<p>Ron Jones is a businessman and Executive Chairman of Tinopolis, one of the UK's largest television production companies.</p>
+								<p>Previously a partner in the accounting and consultancy firm Arthur Andersen. He was a founder of Tinopolis in 1990 and has led the company since that time. Jones took the Company public in 2005 and this led to a rapid expansion by acquisition, including a hostile takeover of the largest listed production company at that time, The Television Corporation PLC. In 2008 Jones and his management team bought the company back in partnership with Vitruvian Partners, a private equity company.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="handle" href="http://www.google.co.uk">Lorem ipsum dolor amit</a>
+						<div class="content">
+							<div class="inner">
+								<p>Kit Hood is a Canadian television director, writer and producer. Kit Hood and Linda Schuyler created a production company called Playing With Time which was established in 1976. The name was inspired by their first educational documentary called Jimmy-Playing With Time (1988). They worked together in the late 1970’s making educational videos for children in junior high schools. Schuyler has since separated from Hood, and has started her own production company called Epitome Pictures.</p>							
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="handle" href="http://www.google.co.uk">Lorem ipsum dolor amit</a>
+						<div class="content">
+							<div class="inner">
+								<p>You're Putting Me On! was a short-lived Bob Stewart NBC game show in which celebrities tried to communicate the identities of famous people through odd and interesting clues. Bill Leyden was the original host, with Larry Blyden taking over halfway through the run.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="handle" href="http://www.google.co.uk">Lorem ipsum dolor amit</a>
+						<div class="content">
+							<div class="inner">
+								<p>Proposition 2 (Mass. Gen. Laws Ch. 59 § 21C[1]) is a Massachusetts statute which limits property tax increases by Massachusetts municipalities. It was passed by ballot initiative,[2] specifically called an initiative petition within Massachusetts state law, in 1980 and went into effect in 1982. The name of the initiative refers to the 2.5% annual limit on the increase in taxes that a municipality is permitted. It is similar to other tax revolt measures passed around the same time in other parts of the United States.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="handle" href="http://www.google.co.uk">Lorem ipsum dolor amit</a>
+						<div class="content">
+							<div class="inner">
+								<p>China National Heavy Duty Truck Group Company Limited (SZSE: 000951), CNHTC or Sinotruk Group is a truck manufacturing state-owned enterprise headquartered in Jinan, Shandong, People's Republic of China.[1] It is currently the third largest truck manufacturer in Mainland China. It is famous for developing and manufacturing the first heavy duty truck - "Huanghe" (Yellow River in Chinese Language) brand vehicle model JN150 in China.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var ListAccordion = new ListAccordion('ListAccordion', {} );	
+		</script>
+
+	</body>
+</html>
